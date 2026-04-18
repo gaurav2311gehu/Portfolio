@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f7fa;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: white;
+  padding: 15px 30px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.navbar li {
+  margin-left: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(to right, #667eea, #764ba2);
+  color: white;
+}
+
+/* Sections */
+section {
+  padding: 50px;
+  text-align: center;
+}
+
+/* Skills */
+.bar {
+  width: 200px;
+  height: 10px;
+  background: #ddd;
+  margin: 5px auto;
+}
+
+.progress {
+  height: 10px;
+  background: #667eea;
+}
+
+/* Projects */
+.project-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  width: 200px;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+/* Button */
+button {
+  padding: 10px 20px;
+  border: none;
+  background: white;
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+#experience {
+  text-align: center;
+}
+
+.experience-content {
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+}
+
+.experience-content h3 {
+  margin-bottom: 5px;
+}
+
+.experience-content ul {
+  padding-left: 20px;
+}
+
+.experience-content li {
+  margin: 8px 0;
+}
+
+#certifications li {
+  margin: 10px 0;
+  padding: 10px;
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+.card ul {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.card li {
+  margin: 6px 0;
+}
