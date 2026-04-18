@@ -79,15 +79,14 @@ npm run build
 
 ## Live Demo
 
-👉 (Add your deployed link here after hosting)
 
 ---
 
 ## Contact
 
-* 📧 Email: [sainigaurav231199@gmail.com](mailto:sainigaurav231199@gmail.com)
-* 💼 LinkedIn: (Add your link)
-* 💻 GitHub: (Add your link)
+* Email: [sainigaurav231199@gmail.com](mailto:sainigaurav231199@gmail.com)
+* LinkedIn:www.linkedin.com/in/gaurav-saini-b8378a252
+* GitHub:https://github.com/gaurav2311gehu
 
 ---
 
