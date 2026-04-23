@@ -3,10 +3,10 @@ kind: Service
 metadata:
   name: portfolio-service
 spec:
-  selector:
-    app.kubernetes.io/name: portfolio
   type: NodePort
+  selector:
+    app: portfolio
   ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 9376
+    - port: 80
+      targetPort: 80
+      nodePort: 30007
