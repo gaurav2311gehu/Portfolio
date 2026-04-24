@@ -13,8 +13,7 @@ jobs:
       # 1. Checkout
       - name: Checkout code
         uses: actions/checkout@v3
-        with:
-          token: ${{ secrets.GH_PAT }}
+    
       # 2. Setup Docker
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
@@ -36,25 +35,18 @@ jobs:
           docker build -t gauravsaini2311/portfolio-app:${{ env.SHA }} .
           docker push gauravsaini2311/portfolio-app:${{ env.SHA }}
 
-      # 6. Update Kubernetes manifest
-      - name: Update deployment.yaml image
+      - name: Generate deployment.yaml from template
         run: |
-          sed -i "s|IMAGE_TAG|${{ env.SHA }}|g" k8s/deployment.yaml
-          echo "Updated image tag:"
+          sed "s|IMAGE_TAG|${{ env.SHA }}|g" k8s/deployment.template.yaml > k8s/deployment.yaml
+          echo "Generated:"
           grep "image:" k8s/deployment.yaml
 
-      # 7. Commit & push updated manifest
-      - name: Commit and push changes
+      - name: Commit deployment.yaml
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git add k8s/deployment.yaml
-          git commit -m "ci: update image tag to ${{ env.SHA }}"
-          git push origin main
-
-      - name: Restore IMAGE_TAG placeholder for next run
-        run: |
-          sed -i "s|${{ env.SHA }}|IMAGE_TAG|g" k8s/deployment.yaml
-          git add k8s/deployment.yaml
-          git commit -m "ci: restore IMAGE_TAG placeholder [skip ci]"
+          git diff --staged --quiet && echo "No changes" && exit 0
+          git commit -m "ci: deploy image ${{ env.SHA }}"
           git push origin main
