@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: portfolio
-        image: gauravsaini2311/portfolio-app:790497fd
+        image: gauravsaini2311/portfolio-app:IMAGE_TAG
         imagePullPolicy: Always
         ports:
         - containerPort: 80
