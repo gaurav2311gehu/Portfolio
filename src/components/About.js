@@ -5,7 +5,7 @@ function About() {
     <section id="about">
       <h2>About Me</h2>
       <p>
-        Results-driven Cloud & DevOps Engineer with 1.5+ years of experience in designing, automating, and managing scalable infrastructure across AWS, Azure, and GCP.
+        Results driven Cloud & DevOps Engineer with 1.5+ years of experience in designing, automating, and managing scalable infrastructure across AWS, Azure, and GCP.
 
 Skilled in Infrastructure as Code (Terraform), Kubernetes orchestration, CI/CD pipelines, and cloud automation, with hands-on experience in Docker, Ansible, and monitoring tools like Prometheus and Grafana.
 
